@@ -1,12 +1,19 @@
 {{ define "main" }}
 <div class="list">
-    <h1>Posts</h1>
-    <a href="/">This is a link</a>
-    {{ range .Pages }}
-    <article>
-        <h2>{{ .Title }}</h2>
-        {{ .Content }}
-    </article>
+    {{ range .Paginator.Pages }}
+    <div class="listItem">
+        <div class="listItemContent">
+            <time class="listItemContentDate">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+            <h1 class="listItemContentTitle">
+                <a href="{{.Permalink}}">{{ .Title }}</a>
+            </h1>
+            <div class="listItemTagsList">
+                {{ range (.GetTerms "tags") }}
+                <a href="{{ .Permalink }}" class="listItemTag">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
     {{ end }}
 </div>
 {{ end }}
