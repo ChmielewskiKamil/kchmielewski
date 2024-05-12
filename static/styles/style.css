@@ -2,6 +2,7 @@
     --bg: #05161f;
     --bgSoft: #1e231f;
     --text: #cdcecd;
+    --textSoft: #a8a9a8;
     --primary: #1400ff;
     --secondary: #005bff;
     --accent: #0094ee;
@@ -9,6 +10,13 @@
     --success: #00e494;
     --warning: #ffa924;
     --error: #ff6e81;
+    --fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html {
+    font-size: 1em;
+    font-family: var(--fonts);
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -27,15 +35,102 @@ a {
 }
 
 .container {
-    max-width: 1366px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 760px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: auto;
     min-height: 100vh;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    font-size: 17px;
+    line-height: 1.7em;
+
+    h1 {
+        border-width: 0;
+        font-size: 1.6em;
+        margin-bottom: 0.2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 1em;
+    }
+
+    p,
+    blockquote,
+    dl,
+    ol,
+    ul,
+    table,
+    pre,
+    details {
+        margin-bottom: 1em;
+    }
+
+    li>ul,
+    li>ol {
+        margin-bottom: 0;
+    }
+
+    pre {
+        width: 100%;
+        overflow-x: auto;
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    pre>code {
+        font-size: 14px;
+    }
+
+    figure {
+        text-align: center;
+
+        figcaption {
+            color: var(--textSoft);
+            font-size: 14px;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        min-width: 400px;
+        display: table;
+        margin: 0 auto 1em auto;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--bgSoft);
+    }
+
+    tr:hover {
+        background-color: var(--accent);
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: var(--info);
+    }
+
+    mark {
+        background-color: var(--accent);
+    }
 }
 
 /* NAVBAR START */
@@ -87,6 +182,78 @@ a {
 
 /* LIST END */
 
+/* SINGLE POST START */
+
+.postInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3em 0 1.5em 0;
+}
+
+.postInfo h1 {
+    margin-bottom: 0;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metaDateDraft {
+    padding: 1px;
+    background-color: var(--warning);
+    border-radius: 5px;
+    color: var(--accent);
+}
+
+.post h1,
+h2,
+h3,
+h4,
+h5 {
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.3em;
+}
+
+.post img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.postIntro {
+    margin-bottom: 1em;
+}
+
+.postContent {
+    margin-bottom: 2em;
+}
+
+.postTags {
+    display: flex;
+    gap: 15px;
+}
+
+.singlePostTag {
+    padding: 2px;
+    border-radius: 5px;
+    background-color: var(--accent);
+}
+
+.singlePostTag:hover {
+    background-color: var(--success);
+}
+
+/* @TODO: This is the same as listItemTag */
+/* .singlePostTag { */
+/*     padding: 5px; */
+/*     border-radius: 5px; */
+/*     background-color: var(--bgSoft); */
+/* } */
+
+/* SINGLE POST END */
+
 /* FOOTER START */
 
 .footer {
@@ -104,44 +271,44 @@ a {
 
 /* FOOTER END */
 
-@media (max-width:1536px) {
-    .container {
-        max-width: 1366px;
-    }
-}
-
-@media (max-width:1366px) {
-    .container {
-        max-width: 1280px;
-    }
-}
-
-@media (max-width:1280px) {
-    .container {
-        max-width: 1024px;
-    }
-}
-
+/* @media (max-width:1536px) { */
+/*     .container { */
+/*         max-width: 1366px; */
+/*     } */
+/* } */
+/**/
+/* @media (max-width:1366px) { */
+/*     .container { */
+/*         max-width: 1280px; */
+/*     } */
+/* } */
+/**/
+/* @media (max-width:1280px) { */
+/*     .container { */
+/*         max-width: 1024px; */
+/*     } */
+/* } */
+/**/
 @media (max-width:1024px) {
     .container {
-        max-width: 768px;
         padding-left: 10px;
         padding-right: 10px;
     }
 }
 
-@media (max-width:768px) {
-    .container {
-        max-width: 640px;
-    }
-
-    .links {
-        font-size: 14px;
-    }
-}
-
-@media (max-width:640px) {
-    .container {
-        max-width: 475px;
-    }
-}
+/**/
+/* @media (max-width:768px) { */
+/*     .container { */
+/*         max-width: 640px; */
+/*     } */
+/**/
+/*     .links { */
+/*         font-size: 14px; */
+/*     } */
+/* } */
+/**/
+/* @media (max-width:640px) { */
+/*     .container { */
+/*         max-width: 475px; */
+/*     } */
+/* } */
