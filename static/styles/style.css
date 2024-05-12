@@ -3,8 +3,8 @@
     --bgSoft: #1e231f;
     --text: #cdcecd;
     --textSoft: #a8a9a8;
-    --primary: #1400ff;
-    --secondary: #005bff;
+    --primary: #005bff;
+    --secondary: #1400ff;
     --accent: #0094ee;
     --info: #0099ff;
     --success: #00e494;
@@ -125,7 +125,7 @@ a {
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: var(--info);
+        background-color: var(--primary);
     }
 
     mark {
@@ -204,7 +204,7 @@ a {
     padding: 1px;
     background-color: var(--warning);
     border-radius: 5px;
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .post h1,
@@ -212,7 +212,7 @@ h2,
 h3,
 h4,
 h5 {
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--textSoft);
     padding-bottom: 0.3em;
 }
 
@@ -220,6 +220,14 @@ h5 {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+}
+
+.post a {
+    color: var(--primary);
+}
+
+.post a:hover {
+    color: var(--accent);
 }
 
 .postIntro {
@@ -235,6 +243,10 @@ h5 {
     gap: 15px;
 }
 
+.postTags > a {
+    color: var(--secondary);
+}
+
 .singlePostTag {
     padding: 2px;
     border-radius: 5px;
@@ -244,13 +256,6 @@ h5 {
 .singlePostTag:hover {
     background-color: var(--success);
 }
-
-/* @TODO: This is the same as listItemTag */
-/* .singlePostTag { */
-/*     padding: 5px; */
-/*     border-radius: 5px; */
-/*     background-color: var(--bgSoft); */
-/* } */
 
 /* SINGLE POST END */
 
