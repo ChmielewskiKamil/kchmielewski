@@ -13,11 +13,19 @@
             </div>
         </div>
 
+        <section class="postIntro">
+            {{ .Summary }}
+        </section>
+
+        {{ partial "toc" . }}
+
         <section class="postContent">
-            {{ .Content }}
+            {{ $content:= replace .Content .Summary "" }}
+            {{ $content | safeHTML }}
         </section>
 
         <span class="postTags">
+            <span class="postTagsLeadingText">Tags:</span>
             {{ range (.GetTerms "tags") }}
             <a href="{{ .Permalink }}" class="singlePostTag">{{ .Name }}</a>
             {{end}}
