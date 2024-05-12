@@ -290,3 +290,20 @@ h5 {
         padding-right: 10px;
     }
 }
+
+/* 404 */
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.not-found a {
+    color: var(--primary);
+}
+
+.not-found h1 {
+    margin-bottom: 1em;
+}
