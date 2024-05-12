@@ -3,18 +3,19 @@ pre.chroma {
     -moz-tab-size: 2;
     -o-tab-size: 2;
     tab-size: 2;
+    border: 1px solid var(--textSoft);
 }
 
 /* Background */
 .bg {
     color: #e2e4e5;
-    background-color: var(--bgSoft);
+    background-color: var(--bg);
 }
 
 /* PreWrapper */
 .chroma {
     color: #e2e4e5;
-    background-color: var(--bgSoft);
+    background-color: var(--bg);
 }
 
 /* Other */
