@@ -1,4 +1,27 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+<main>
+    <article class="post">
+        <div class="postInfo">
+            <h1 class="title">{{ .Title }}</h1>
+            <div class="meta">
+                <span class="metaAuthor">{{ .Params.author}} </span>
+                <time class="metaDate">{{ dateFormat .Site.Params.dateFormat .Date }}
+                    {{ if .Draft }}
+                    <span class="metaDateDraft">DRAFT</span>
+                    {{ end }}
+                </time>
+            </div>
+        </div>
+
+        <section class="postContent">
+            {{ .Content }}
+        </section>
+
+        <span class="postTags">
+            {{ range (.GetTerms "tags") }}
+            <a href="{{ .Permalink }}" class="singlePostTag">{{ .Name }}</a>
+            {{end}}
+        </span>
+    </article>
+</main>
 {{ end }}
