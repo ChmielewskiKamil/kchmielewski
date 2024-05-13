@@ -100,7 +100,8 @@ a {
 
     table {
         border-collapse: collapse;
-        min-width: 400px;
+        min-width: 95%;
+        max-width: 95%;
         display: table;
         margin: 0 auto 1em auto;
     }
