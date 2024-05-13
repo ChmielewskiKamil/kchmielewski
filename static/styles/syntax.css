@@ -4,6 +4,7 @@ pre.chroma {
     -o-tab-size: 2;
     tab-size: 2;
     border: 1px solid var(--textSoft);
+    line-height: 1.1em;
 }
 
 /* Background */
