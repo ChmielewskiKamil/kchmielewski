@@ -2,7 +2,7 @@
 title = 'The simplest possible blog'
 date = 2024-05-12T22:23:16+02:00
 draft = false
-tags = ["go", "hugo"]
+tags = ["golang", "hugo"]
 author = "Kamil Chmielewski"
 +++
 
