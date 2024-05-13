@@ -281,14 +281,7 @@ h5 {
 
 /* FOOTER END */
 
-@media (max-width:1024px) {
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-/* 404 */
+/* 404 START */
 .not-found {
     display: flex;
     flex-direction: column;
@@ -303,4 +296,13 @@ h5 {
 
 .not-found h1 {
     margin-bottom: 1em;
+}
+
+/* 404 END */
+
+@media (max-width:1024px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
