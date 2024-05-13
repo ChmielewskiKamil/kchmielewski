@@ -4,6 +4,7 @@ title = 'kchmielewski.xyz'
 
 [params]
  dateFormat = "Jan 2, 2006"
+ SiteDescription = "All things Ethereum"
 
 [taxonomies]
  author = "author"

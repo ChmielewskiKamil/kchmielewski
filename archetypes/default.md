@@ -4,6 +4,7 @@ date = {{ .Date }}
 draft = true
 tags = []
 author = "Kamil Chmielewski"
+description = ""
 +++
 
 Intro here.
