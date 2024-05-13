@@ -214,6 +214,14 @@ a {
     color: var(--primary);
 }
 
+#TableOfContents a {
+    color: var(--textSoft);
+}
+
+#TableOfContents a:hover {
+    color: var(--accent);
+}
+
 .post h1,
 h2,
 h3,
