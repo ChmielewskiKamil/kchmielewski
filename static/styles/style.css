@@ -297,6 +297,10 @@ h5 {
     margin-top: auto;
 }
 
+.footer a:hover {
+    color: var(--accent);
+}
+
 .footerSocial {
     display: flex;
     gap: 10px;
@@ -327,5 +331,14 @@ h5 {
     .container {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .footer {
+        margin-top: 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
     }
 }
