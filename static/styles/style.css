@@ -30,6 +30,21 @@ a {
     text-decoration: none;
 }
 
+/* Fixes iOS font sizing anomaly */
+code {
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+:not(pre) > code {
+    background-color: var(--bgSoft);
+    padding: 1px 3px;
+    border-radius: 5px;
+    font-size: inherit;
+}
+
 .container {
     max-width: 760px;
     padding-left: 15px;
